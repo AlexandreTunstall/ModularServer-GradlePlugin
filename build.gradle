@@ -1,0 +1,19 @@
+apply plugin: 'groovy'
+apply plugin: 'idea'
+
+sourceSets {
+    main {
+        java.srcDirs = []
+        groovy.srcDirs = ['main/src']
+        resources.srcDirs = ['main/rsc']
+    }
+    test {
+        java.srcDirs = []
+        groovy.srcDirs = ['test/src']
+        resources.srcDirs = ['test/rsc']
+    }
+}
+
+dependencies {
+    compile gradleApi()
+}
